@@ -37,7 +37,6 @@ export const Homepage = () => {
       .catch((error) => alertError(error));
   }, []);
 
-  console.log(todayGames);
   return (
     <S.PageContainer>
       <S.ArticleContainer>
