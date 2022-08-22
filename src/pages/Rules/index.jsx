@@ -18,7 +18,7 @@ export const Rules = () => {
           </li>
           <li>Se você errar tudo, você não pontua.</li>
           <li>
-            O primeiro colocado receberá 65% do prêmio. <br />
+            O primeiro lugar receberá 65% do prêmio. <br />
             O segundo lugar receberá 25% do prêmio. <br />
             O terceiro lugar receberá 10% do prêmio. <br />
           </li>
