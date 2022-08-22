@@ -19,3 +19,15 @@ export const rankingHeader = styled.div`
   margin-top: 20px;
   color: ${({ theme }) => theme.colors.secondary};
 `;
+
+export const H2 = styled.h2`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 10vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+`;

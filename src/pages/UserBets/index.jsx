@@ -8,6 +8,7 @@ import { UserContext } from "../../contexts/UserContext";
 import * as S from "../../styles/style.js";
 import { alertError } from "../../utils/alertError";
 import { config } from "../../utils/config";
+import { formats } from "../../utils/formats";
 
 export const UserBets = () => {
   const { userId } = useParams();
@@ -15,6 +16,7 @@ export const UserBets = () => {
   const { user } = useContext(UserContext);
 
   const [bets, setBets] = useState(null);
+  const startCup = formats.startCup();
 
   useEffect(() => {
     axios
@@ -27,18 +29,29 @@ export const UserBets = () => {
     return <Loading />;
   }
 
-  return (
-    <S.PageContainer>
+  if (startCup) {
+    return (
+      <S.PageContainer>
+        <S.GameBets>
+          <h2>
+            {bets[0]?.user
+              ? `Placares ${bets[0]?.user.name}`
+              : "Não há apostas deste usuário"}
+          </h2>
+          {bets?.map((bet) => (
+            <UserBet key={bet.id} bet={bet} />
+          ))}
+        </S.GameBets>
+      </S.PageContainer>
+    );
+  } else {
+    return (
       <S.GameBets>
-        <h2>
-          {bets[0]?.user
-            ? `${bets[0]?.user.name} bets`
-            : "There are no bets for this user"}
-        </h2>
-        {bets?.map((bet) => (
-          <UserBet key={bet.id} bet={bet} />
-        ))}
+        <h2>{`Placares ${bets[0]?.user.name}`}</h2>
+        <S.H2>
+          Poderá ser visto somente <br /> quando a copa começar!
+        </S.H2>
       </S.GameBets>
-    </S.PageContainer>
-  );
+    );
+  }
 };

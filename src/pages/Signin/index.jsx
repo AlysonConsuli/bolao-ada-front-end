@@ -40,7 +40,7 @@ export const Signin = () => {
     <S.AuthContainer>
       <S.BoxAuthLogo>
         <h1>Bolão ADA</h1>
-        <span>the best way to experience a world cup</span>
+        <span>a melhor maneira de vivenciar uma copa do mundo</span>
       </S.BoxAuthLogo>
       <S.AuthForm onSubmit={handleLogin}>
         <Input
@@ -48,31 +48,31 @@ export const Signin = () => {
           name="username"
           id="username"
           required
-          placeholder="name"
+          placeholder="nome"
           onChange={(e) =>
             setUserSignin({ ...userSignin, name: e.target.value })
           }
           value={userSignin.name}
           disabled={disabled}
-          message="Invalid name"
+          message="Nome inválido"
         />
         <Input
           type="password"
           name="password"
           id="password"
           required
-          placeholder="password"
+          placeholder="senha"
           onChange={(e) =>
             setUserSignin({ ...userSignin, password: e.target.value })
           }
           value={userSignin.password}
           disabled={disabled}
           minLength="4"
-          message="Minimum of 4 characters"
+          message="Mínimo de 4 caracteres"
         />
         <Button type="submit" disabled={disabled} text="Login" />
         <Link to="/sign-up">
-          <span>First time? Create an account!</span>
+          <span>Primeira vez? Crie a sua conta aqui!</span>
         </Link>
       </S.AuthForm>
     </S.AuthContainer>

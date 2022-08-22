@@ -23,11 +23,11 @@ export const ModalComponent = ({
       )}
     >
       <span>
-        Are you sure you want <br /> to {message}?
+        Tem certeza que quer <br /> fazer {message}?
       </span>
       <div>
-        <button onClick={() => callbackCloseModal()}>No, go back</button>
-        <button onClick={() => callbackFunction()}>Yes, {message}</button>
+        <button onClick={() => callbackCloseModal()}>Não, voltar</button>
+        <button onClick={() => callbackFunction()}>Sim, {message}</button>
       </div>
     </Modal>
   );

@@ -8,6 +8,7 @@ import { UserContext } from "../../contexts/UserContext";
 import * as S from "../../styles/style.js";
 import { alertError } from "../../utils/alertError";
 import { config } from "../../utils/config";
+import { formats } from "../../utils/formats";
 
 export const GameBets = () => {
   const { gameId } = useParams();
@@ -15,6 +16,7 @@ export const GameBets = () => {
   const { user } = useContext(UserContext);
 
   const [bets, setBets] = useState(null);
+  const startCup = formats.startCup();
 
   useEffect(() => {
     axios
@@ -27,28 +29,39 @@ export const GameBets = () => {
     return <Loading />;
   }
 
-  return (
-    <S.PageContainer>
+  if (startCup) {
+    return (
+      <S.PageContainer>
+        <S.GameBets>
+          <S.GameTitle>
+            <span>{bets[0]?.game.team1.name}</span>
+            <span>
+              {bets[0]?.game.score1 !== null ? bets[0]?.game.score1 : "-"}
+            </span>
+            {bets[0]?.game ? (
+              <span>x</span>
+            ) : (
+              <p>Não há apostas para este jogo</p>
+            )}
+            <span>
+              {bets[0]?.game.score2 !== null ? bets[0]?.game.score2 : "-"}
+            </span>
+            <span>{bets[0]?.game.team2.name}</span>
+          </S.GameTitle>
+          {bets?.map((bet) => (
+            <Bet key={bet.id} bet={bet} />
+          ))}
+        </S.GameBets>
+      </S.PageContainer>
+    );
+  } else {
+    return (
       <S.GameBets>
-        <S.GameTitle>
-          <span>{bets[0]?.game.team1.name}</span>
-          <span>
-            {bets[0]?.game.score1 !== null ? bets[0]?.game.score1 : "-"}
-          </span>
-          {bets[0]?.game ? (
-            <span>x</span>
-          ) : (
-            <p>There are no bets for this game</p>
-          )}
-          <span>
-            {bets[0]?.game.score2 !== null ? bets[0]?.game.score2 : "-"}
-          </span>
-          <span>{bets[0]?.game.team2.name}</span>
-        </S.GameTitle>
-        {bets?.map((bet) => (
-          <Bet key={bet.id} bet={bet} />
-        ))}
+        <h2>Palpites desse jogo</h2>
+        <S.H2>
+          Poderá ser visto somente <br /> quando a copa começar!
+        </S.H2>
       </S.GameBets>
-    </S.PageContainer>
-  );
+    );
+  }
 };

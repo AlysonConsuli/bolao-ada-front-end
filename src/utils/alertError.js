@@ -6,6 +6,6 @@ export const alertError = (error) => {
     title: "Oops...",
     text:
       error?.response?.data ||
-      "Something unexpected happened. Refresh the page to try again",
+      "Algo inesperado aconteceu. Atualize a página para tentar novamente",
   });
 };

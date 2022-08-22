@@ -14,6 +14,7 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   @media (max-width: ${({ theme }) => theme.breakPoints.laptop}) {
     width: 88vw;

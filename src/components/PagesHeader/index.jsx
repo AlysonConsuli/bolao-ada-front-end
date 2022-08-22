@@ -39,7 +39,10 @@ export const PagesHeader = () => {
           <h1>Bolão ADA</h1>
           <h2>{title}</h2>
         </S.Title>
-        <S.LogoutIcon onClick={() => setLogoutModal(true)}></S.LogoutIcon>
+        <S.BoxLogout>
+          <S.LogoutIcon onClick={() => setLogoutModal(true)}></S.LogoutIcon>
+          <span>logout</span>
+        </S.BoxLogout>
       </S.PagesHeader>
     </>
   );

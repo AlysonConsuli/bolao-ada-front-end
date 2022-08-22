@@ -28,9 +28,9 @@ export const Ranking = () => {
   return (
     <S.PageContainer>
       <S.rankingHeader>
-        <span>Name</span>
-        <span>Points</span>
-        <span>Position</span>
+        <span>Nome</span>
+        <span>Pontos</span>
+        <span>Posição</span>
       </S.rankingHeader>
       <S.Users>
         {ranking?.map((user, i) => (

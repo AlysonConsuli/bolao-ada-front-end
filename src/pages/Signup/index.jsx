@@ -33,7 +33,7 @@ export const SignUp = () => {
     <S.AuthContainer>
       <S.BoxAuthLogo>
         <h1>Bolão ADA</h1>
-        <span>the best way to experience a world cup</span>
+        <span>a melhor maneira de vivenciar uma copa do mundo</span>
       </S.BoxAuthLogo>
       <S.AuthForm onSubmit={createUser}>
         <Input
@@ -41,34 +41,34 @@ export const SignUp = () => {
           name="name"
           id="name"
           required
-          placeholder="name"
+          placeholder="nome"
           onChange={(e) =>
             setUserSignup({ ...userSignup, name: e.target.value })
           }
           value={userSignup.name}
           disabled={disabled}
-          message="Invalid name"
+          message="Nome inválido"
         />
         <Input
           type="password"
           name="password"
           id="password"
           required
-          placeholder="password"
+          placeholder="senha"
           onChange={(e) =>
             setUserSignup({ ...userSignup, password: e.target.value })
           }
           value={userSignup.password}
           disabled={disabled}
           minLength="4"
-          message="Minimum of 4 characters"
+          message="Mínimo de 4 caracteres"
         />
         <Input
           type="password"
           name="passwordConfirmation"
           id="passwordConfirmation"
           required
-          placeholder="password confirmation"
+          placeholder="Confirme a senha"
           onChange={(e) =>
             setUserSignup({
               ...userSignup,
@@ -77,11 +77,11 @@ export const SignUp = () => {
           }
           value={userSignup.passwordConfirmation}
           disabled={disabled}
-          message="Password confirmation must ref password"
+          message="Senhas não coincidem"
         />
-        <Button type="submit" disabled={disabled} text="Sign Up" />
+        <Button type="submit" disabled={disabled} text="Cadastrar" />
         <Link to="/">
-          <span>Switch back to log in</span>
+          <span>Voltar para fazer login</span>
         </Link>
       </S.AuthForm>
     </S.AuthContainer>

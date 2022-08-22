@@ -4,23 +4,32 @@ export const Rules = () => {
   return (
     <S.PageContainer>
       <S.Rules>
-        <h1>Rules Qatar Bets</h1>
+        <h1>Regras Bolão ADA</h1>
         <ul>
-          <li>If you hit the exact score of the game, you get 10 points.</li>
-          <li>If you hit the winner and only one score, you get 7 points.</li>
-          <li>If you hit only the winner, you get 5 points.</li>
           <li>
-            If you miss the winner, but hit one of the scores, you get 2 points.
+            Se você acertar a pontuação exata do jogo, você ganha 10 pontos.
           </li>
-          <li>If you get everything wrong, you don't score.</li>
-          <li>In case of a tie, the players share the prize!</li>
           <li>
-            The first place will win 65% of the prize. The second place will win
-            25% of the prize. The third place will win 10% of the prize.
+            Se você acertar o vencedor e apenas um dos placares, você ganha 7
+            pontos.
           </li>
-          <li>To participate, you have to pay 20 reais to Admin.</li>
+          <li>Se você acertar apenas o vencedor, você ganha 5 pontos.</li>
+          <li>
+            Se você errar o vencedor, mas acertar uma das pontuações, você ganha
+            2 pontos.
+          </li>
+          <li>Se você errar tudo, você não pontua.</li>
+          <li>
+            O primeiro colocado receberá 65% do prêmio. <br />
+            O segundo lugar receberá 25% do prêmio. <br />
+            O terceiro lugar receberá 10% do prêmio. <br />
+          </li>
+          <li>
+            Em caso de empate, os jogadores dividem o prêmio relativo a posição!
+          </li>
+          <li>Para participar é preciso pagar 20 reais ao Alex.</li>
         </ul>
-        <h2>Good luck and enjoy!!!</h2>
+        <h2>Boa sorte !!!</h2>
       </S.Rules>
     </S.PageContainer>
   );

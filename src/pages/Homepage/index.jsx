@@ -25,7 +25,7 @@ export const Homepage = () => {
         for (let i = 0; i < data.games.length; i++) {
           const game = data.games[i];
           if (formats.nextGame(game.date) && data.games[i - 1]) {
-            setTodayGames([data.games[i - 1], game]);
+            setTodayGames([game, data.games[i - 1]]);
             break;
           }
           if (formats.nextGame(game.date) && !data.games[i - 1]) {
@@ -42,12 +42,12 @@ export const Homepage = () => {
       <S.ArticleContainer>
         <Link to="/add-bets">
           <S.Article>
-            <span>{startCup ? "My bets" : "Add bets"}</span>
+            <span>{startCup ? "Meus placares" : "Adicionar Placar"}</span>
           </S.Article>
         </Link>
         <Link to="/games">
           <S.Article>
-            <span>Games</span>
+            <span>Jogos</span>
           </S.Article>
         </Link>
         <Link to="/ranking">
@@ -57,15 +57,15 @@ export const Homepage = () => {
         </Link>
         <Link to="/rules">
           <S.Article>
-            <span>Rules</span>
+            <span>Regras</span>
           </S.Article>
         </Link>
       </S.ArticleContainer>
       {games[games?.length - 1]?.score1 && todayGames ? (
-        <S.EndMessage>Click ranking to see the winners!!!</S.EndMessage>
+        <S.EndMessage>Clique no ranking para ver os vencedores!!!</S.EndMessage>
       ) : todayGames ? (
         <S.GamesHome>
-          <S.HomeInfo>Next games</S.HomeInfo>
+          <S.HomeInfo>À seguir</S.HomeInfo>
           {todayGames?.map((game) => {
             return <GameResult key={game.id} game={game} />;
           })}

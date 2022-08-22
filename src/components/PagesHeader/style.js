@@ -4,7 +4,7 @@ import { FiLogOut } from "react-icons/fi";
 import { FiArrowLeft } from "react-icons/fi";
 
 export const PagesHeader = styled.header`
-  padding: 0 20px;
+  padding-left: 20px;
   position: sticky;
   z-index: 11;
   top: 0;

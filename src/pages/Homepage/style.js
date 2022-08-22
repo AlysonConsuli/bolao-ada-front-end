@@ -22,7 +22,6 @@ export const Header = styled.header`
     color: ${({ theme }) => theme.colors.text};
   }
   svg {
-    margin-right: 20px;
     color: ${({ theme }) => theme.colors.text};
   }
 `;
@@ -30,6 +29,19 @@ export const Header = styled.header`
 export const LogoutIcon = styled(FiLogOut)`
   font-size: 25px;
   cursor: pointer;
+`;
+
+export const BoxLogout = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 15px;
+  gap: 3px;
+  span {
+    color: white;
+    text-align: center;
+  }
 `;
 
 export const ArticleContainer = styled.div`

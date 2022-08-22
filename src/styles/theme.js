@@ -3,14 +3,14 @@ export const theme = {
     mainFont: "'Lato', sans-serif",
   },
   colors: {
-    mainBackground: "#8A1538",
-    secondaryBackground: "#5e2129",
+    mainBackground: "#0000ff",
+    secondaryBackground: "#00008b",
     main: "#000000",
     secondary: "#FFFFFF",
-    text: "#f0ffff",
+    text: "#FFFFFF",
     error: "#ff7b5a",
     placeholder: "#9F9F9F",
-    buttonBackground: "#1877F2",
+    buttonBackground: "#00008b",
   },
   breakPoints: {
     mobile: "320px",
