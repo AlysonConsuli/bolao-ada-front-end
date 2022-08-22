@@ -57,7 +57,7 @@ export const GameBets = () => {
   } else {
     return (
       <S.GameBets>
-        <h2>Palpites desse jogo</h2>
+        <h2>Palpites deste jogo</h2>
         <S.H2>
           Poderá ser visto somente <br /> quando a copa começar!
         </S.H2>

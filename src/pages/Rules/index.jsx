@@ -6,17 +6,15 @@ export const Rules = () => {
       <S.Rules>
         <h1>Regras Bolão ADA</h1>
         <ul>
-          <li>
-            Se você acertar a pontuação exata do jogo, você ganha 10 pontos.
-          </li>
+          <li>Se você acertar o placar exato do jogo, você ganha 10 pontos.</li>
           <li>
             Se você acertar o vencedor e apenas um dos placares, você ganha 7
             pontos.
           </li>
           <li>Se você acertar apenas o vencedor, você ganha 5 pontos.</li>
           <li>
-            Se você errar o vencedor, mas acertar uma das pontuações, você ganha
-            2 pontos.
+            Se você errar o vencedor, mas acertar um dos placares, você ganha 2
+            pontos.
           </li>
           <li>Se você errar tudo, você não pontua.</li>
           <li>

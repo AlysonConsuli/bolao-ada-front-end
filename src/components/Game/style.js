@@ -67,6 +67,7 @@ export const EditIcon = styled(FiEdit)`
   right: -29px;
   bottom: 3px;
   cursor: pointer;
+  color: ${({ theme }) => theme.colors.svg};
   @media (max-width: 374px) {
     right: -26px;
   }

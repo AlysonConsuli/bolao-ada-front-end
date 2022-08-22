@@ -40,7 +40,10 @@ export const Signin = () => {
     <S.AuthContainer>
       <S.BoxAuthLogo>
         <h1>Bolão ADA</h1>
-        <span>a melhor maneira de vivenciar uma copa do mundo</span>
+        <span>
+          a melhor maneira de vivenciar uma
+          <br /> copa do mundo
+        </span>
       </S.BoxAuthLogo>
       <S.AuthForm onSubmit={handleLogin}>
         <Input

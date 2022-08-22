@@ -14,6 +14,7 @@ export const Homepage = () => {
   const URL = process.env.REACT_APP_API_URL;
   const { user } = useContext(UserContext);
   const [games, setGames] = useState([]);
+  const [userBets, setUserBets] = useState(null);
   const [todayGames, setTodayGames] = useState(null);
   const startCup = formats.startCup();
 
@@ -25,7 +26,7 @@ export const Homepage = () => {
         for (let i = 0; i < data.games.length; i++) {
           const game = data.games[i];
           if (formats.nextGame(game.date) && data.games[i - 1]) {
-            setTodayGames([game, data.games[i - 1]]);
+            setTodayGames([data.games[i - 1], game]);
             break;
           }
           if (formats.nextGame(game.date) && !data.games[i - 1]) {
@@ -34,6 +35,13 @@ export const Homepage = () => {
           }
         }
       })
+      .catch((error) => alertError(error));
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${URL}/bets?groupBy=user`, config(user))
+      .then(({ data }) => setUserBets(data.bets))
       .catch((error) => alertError(error));
   }, []);
 
@@ -61,11 +69,16 @@ export const Homepage = () => {
           </S.Article>
         </Link>
       </S.ArticleContainer>
-      {games[games?.length - 1]?.score1 && todayGames ? (
+      {userBets?.length < 48 ? (
+        <S.FirstMessage>
+          Ainda faltam preencher alguns placares! <br />
+          Clique em "Adicionar Placar" para terminar
+        </S.FirstMessage>
+      ) : games[games?.length - 1]?.score1 && todayGames ? (
         <S.EndMessage>Clique no ranking para ver os vencedores!!!</S.EndMessage>
       ) : todayGames ? (
         <S.GamesHome>
-          <S.HomeInfo>À seguir</S.HomeInfo>
+          <S.HomeInfo>A seguir</S.HomeInfo>
           {todayGames?.map((game) => {
             return <GameResult key={game.id} game={game} />;
           })}

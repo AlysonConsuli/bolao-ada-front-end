@@ -22,6 +22,7 @@ export const EyeIcon = styled(FiEye)`
   position: absolute;
   right: -29px;
   cursor: pointer;
+  color: ${({ theme }) => theme.colors.svg};
   @media (max-width: 374px) {
     right: -26px;
   }

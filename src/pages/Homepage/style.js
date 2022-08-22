@@ -90,6 +90,8 @@ export const GamesHome = styled.div`
 `;
 
 export const Time = styled.span`
+  text-align: center;
+  width: 100%;
   font-size: 16px;
   color: ${({ theme }) => theme.colors.secondary};
   padding-right: 17px;
@@ -113,4 +115,16 @@ export const EndMessage = styled.p`
   justify-content: center;
   align-items: center;
   text-align: center;
+`;
+
+export const FirstMessage = styled.p`
+  font-size: 17px;
+  color: ${({ theme }) => theme.colors.secondary};
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 26px;
+  font-weight: 700;
 `;
