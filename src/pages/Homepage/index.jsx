@@ -11,6 +11,7 @@ import { config } from "../../utils/config.js";
 import { formats } from "../../utils/formats.js";
 
 export const Homepage = () => {
+  const CUP_GAMES = 6;
   const URL = process.env.REACT_APP_API_URL;
   const { user } = useContext(UserContext);
   const [games, setGames] = useState([]);
@@ -69,7 +70,7 @@ export const Homepage = () => {
           </S.Article>
         </Link>
       </S.ArticleContainer>
-      {userBets?.length < 48 ? (
+      {userBets?.length < CUP_GAMES ? (
         <S.FirstMessage>
           Ainda faltam preencher alguns placares! <br />
           Clique em "Adicionar Placar" para terminar
