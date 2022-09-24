@@ -28,7 +28,7 @@ export const Header = () => {
         <h1>Bolão ADA</h1>
         <S.BoxLogout>
           <S.LogoutIcon onClick={() => setLogoutModal(true)}></S.LogoutIcon>
-          <span>logout</span>
+          <span>sair</span>
         </S.BoxLogout>
       </S.Header>
     </>

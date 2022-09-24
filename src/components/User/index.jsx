@@ -14,11 +14,11 @@ export const User = ({ user }) => {
   }
 
   return (
-    <S.User myRanking={myRanking}>
+    <S.User myRanking={myRanking} onClick={seeBets}>
       <span>{user.name}</span>
       <span>{user.points !== null ? user.points : "-"}</span>
       <S.Rank pos={user.ranking}>{user.ranking}º</S.Rank>
-      <S.EyeIcon onClick={seeBets}></S.EyeIcon>
+      <S.EyeIcon></S.EyeIcon>
     </S.User>
   );
 };

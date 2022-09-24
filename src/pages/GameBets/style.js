@@ -5,7 +5,7 @@ export const GameBets = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 7px;
+  gap: 9px;
   margin: 17px 0;
 
   h2 {

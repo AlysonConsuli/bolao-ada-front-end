@@ -4,7 +4,7 @@ import { FiLogOut } from "react-icons/fi";
 import { FiArrowLeft } from "react-icons/fi";
 
 export const PagesHeader = styled.header`
-  padding-left: 20px;
+  padding-left: 15px;
   position: sticky;
   z-index: 11;
   top: 0;
@@ -36,7 +36,7 @@ export const Title = styled.div`
   justify-content: center;
   align-items: center;
   gap: 5px;
-  margin-top: 17px;
+  margin-top: 15px;
 `;
 
 export const LogoutIcon = styled(FiLogOut)`

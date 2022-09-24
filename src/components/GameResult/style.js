@@ -15,6 +15,7 @@ export const GameResult = styled.div`
   padding: 0 5px;
   margin-right: 18px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 `;
 
 export const EyeIcon = styled(FiEye)`

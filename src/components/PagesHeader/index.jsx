@@ -41,7 +41,7 @@ export const PagesHeader = () => {
         </S.Title>
         <S.BoxLogout>
           <S.LogoutIcon onClick={() => setLogoutModal(true)}></S.LogoutIcon>
-          <span>logout</span>
+          <span>sair</span>
         </S.BoxLogout>
       </S.PagesHeader>
     </>

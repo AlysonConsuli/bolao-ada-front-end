@@ -17,7 +17,7 @@ export const GameResult = ({ game }) => {
   return (
     <>
       <S.Time>{date}</S.Time>
-      <S.GameResult>
+      <S.GameResult onClick={seeBets}>
         <S.TeamName>{game.team1.name}</S.TeamName>
         <S.BoxInput>
           {<span>{score1}</span>}
@@ -25,7 +25,7 @@ export const GameResult = ({ game }) => {
           {<span>{score2}</span>}
         </S.BoxInput>
         <S.TeamName>{game.team2.name}</S.TeamName>
-        <S.EyeIcon onClick={seeBets}></S.EyeIcon>
+        <S.EyeIcon></S.EyeIcon>
       </S.GameResult>
     </>
   );

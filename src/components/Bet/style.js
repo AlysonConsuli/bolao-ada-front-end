@@ -12,7 +12,7 @@ export const Bet = styled.div`
   position: relative;
   padding: 0 5px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
-  border: ${(props) => (props.myBet ? "3px solid #00a000" : "")};
+  outline: ${(props) => (props.myBet ? "3px solid #00a000" : "")};
 `;
 
 export const UserName = styled.span`

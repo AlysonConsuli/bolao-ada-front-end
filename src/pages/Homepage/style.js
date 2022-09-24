@@ -38,6 +38,7 @@ export const BoxLogout = styled.div`
   flex-direction: column;
   margin-right: 15px;
   gap: 3px;
+  margin-top: 5px;
   span {
     color: white;
     text-align: center;

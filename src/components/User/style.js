@@ -1,25 +1,27 @@
 import styled from "styled-components";
 
 export const User = styled.div`
-  border: ${(props) => (props.myRanking ? "3px solid #00a000" : "")};
+  outline: ${(props) => (props.myRanking ? "3px solid #00a000" : "")};
   background-color: ${({ theme }) => theme.colors.secondary};
   min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
+  width: 85%;
   max-width: 500px;
   border-radius: 6px;
   padding: 0 5px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
   position: relative;
+  cursor: pointer;
+  margin-right: 15px;
   span {
     width: 22px;
     text-align: center;
     font-weight: 700;
   }
   span:first-child {
-    width: 39%;
+    width: 42%;
     text-align: left;
     font-size: 17px;
     font-weight: 700;
@@ -29,7 +31,7 @@ export const User = styled.div`
     position: absolute;
     left: 45%;
   }
-  @media (min-width: ${({ theme }) => theme.breakPoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints.mobile}) {
     span:nth-child(2) {
       left: 47%;
     }
