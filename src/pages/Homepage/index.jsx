@@ -11,7 +11,7 @@ import { config } from "../../utils/config.js";
 import { formats } from "../../utils/formats.js";
 
 export const Homepage = () => {
-  const CUP_GAMES = 6;
+  const CUP_GAMES = 48;
   const URL = process.env.REACT_APP_API_URL;
   const { user } = useContext(UserContext);
   const [games, setGames] = useState([]);
