@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { GameResult } from "../../components/GameResult/index.jsx";
 import { LoadingHome } from "../../components/Loading/index.jsx";
@@ -35,11 +35,14 @@ export const Homepage = () => {
             break;
           }
         }
+        if (games[games?.length - 1]?.score1) {
+          setTodayGames([data.games[46], data.games[47]]);
+        }
       })
       .catch((error) => alertError(error));
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     axios
       .get(`${URL}/bets?groupBy=user`, config(user))
       .then(({ data }) => setUserBets(data.bets))
@@ -75,7 +78,7 @@ export const Homepage = () => {
           Ainda faltam preencher alguns placares! <br />
           Clique em "Adicionar Placar" para terminar
         </S.FirstMessage>
-      ) : games[games?.length - 1]?.score1 && todayGames ? (
+      ) : formats.endCup() ? (
         <S.EndMessage>Clique no ranking para ver os vencedores!!!</S.EndMessage>
       ) : todayGames ? (
         <S.GamesHome>

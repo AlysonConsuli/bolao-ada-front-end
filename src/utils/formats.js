@@ -11,7 +11,7 @@ const formatDate = (date) => {
 
 const nextGame = (date) => {
   const gameDay = dayjs(date);
-  //const testDay = "2022-11-21 08:00";
+  //const testDay = "2022-11-20 08:00";
   return dayjs().isBefore(gameDay);
 };
 
@@ -21,8 +21,15 @@ const startCup = () => {
   return dayjs().isAfter(cupDay);
 };
 
+const endCup = () => {
+  const lastDay = dayjs("2022-12-02 18:15");
+  // const testDay = "2022-12-02 18:31";
+  return dayjs().isAfter(lastDay);
+};
+
 export const formats = {
   formatDate,
   nextGame,
   startCup,
+  endCup,
 };
