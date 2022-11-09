@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import { FiLogOut } from "react-icons/fi";
 import { FiArrowLeft } from "react-icons/fi";
+import { FaHome } from "react-icons/fa";
 
 export const PagesHeader = styled.header`
   padding-left: 15px;
@@ -45,6 +46,11 @@ export const LogoutIcon = styled(FiLogOut)`
 `;
 
 export const BackIcon = styled(FiArrowLeft)`
+  font-size: 25px;
+  cursor: pointer;
+`;
+
+export const HomeIcon = styled(FaHome)`
   font-size: 25px;
   cursor: pointer;
 `;

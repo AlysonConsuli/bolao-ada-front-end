@@ -40,8 +40,7 @@ export const PagesHeader = () => {
           <h2>{title}</h2>
         </S.Title>
         <S.BoxLogout>
-          <S.LogoutIcon onClick={() => setLogoutModal(true)}></S.LogoutIcon>
-          <span>sair</span>
+          <S.HomeIcon onClick={() => navigate("/homepage")}></S.HomeIcon>
         </S.BoxLogout>
       </S.PagesHeader>
     </>
