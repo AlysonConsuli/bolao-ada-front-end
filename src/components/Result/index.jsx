@@ -26,7 +26,11 @@ export const Result = ({ game }) => {
     e.preventDefault();
     setDisabled(true);
     try {
-      await axios.post(URL, { id: game.id, ...scores }, config(user));
+      await axios.post(
+        URL,
+        { id: game.id, score1: +scores.score1, score2: +scores.score2 },
+        config(user),
+      );
       setHasResult(true);
     } catch (error) {
       setDisabled(false);
@@ -47,7 +51,7 @@ export const Result = ({ game }) => {
           <span>{scores.score1}</span>
         ) : (
           <GameInput
-            onChange={(e) => setScores({ ...scores, score1: +e.target.value })}
+            onChange={(e) => setScores({ ...scores, score1: e.target.value })}
             value={scores.score1}
             disabled={disabled}
           />
@@ -57,7 +61,7 @@ export const Result = ({ game }) => {
           <span>{scores.score2}</span>
         ) : (
           <GameInput
-            onChange={(e) => setScores({ ...scores, score2: +e.target.value })}
+            onChange={(e) => setScores({ ...scores, score2: e.target.value })}
             value={scores.score2}
             disabled={disabled}
           />
