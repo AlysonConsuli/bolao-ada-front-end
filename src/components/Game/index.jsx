@@ -37,7 +37,7 @@ export const Game = ({ obj }) => {
     try {
       await axios.post(
         URL,
-        { gameId, score1: +score1, score2: +score2 },
+        { gameId, score1: +scores.score1, score2: +scores.score2 },
         config(user),
       );
       setHasBet(true);
