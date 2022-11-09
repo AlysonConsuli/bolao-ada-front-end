@@ -18,6 +18,7 @@ export const GameInput = ({ onChange, value, disabled }) => {
         disabled={disabled}
         onBlur={() => setFocused(true)}
         focused={focused.toString()}
+        autoComplete="off"
       />
     </S.GameInput>
   );
