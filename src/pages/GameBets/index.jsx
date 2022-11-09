@@ -29,7 +29,7 @@ export const GameBets = () => {
     return <Loading />;
   }
 
-  if (!startCup) {
+  if (startCup) {
     return (
       <S.PageContainer>
         <S.GameBets>
