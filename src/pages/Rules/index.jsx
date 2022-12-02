@@ -22,6 +22,7 @@ export const Rules = () => {
             O segundo lugar receberá 25% do prêmio. <br />
             O terceiro lugar receberá 10% do prêmio. <br />
           </li>
+          <li>Para gastar na Eletrônica ADA</li>
           <li>
             Em caso de empate, os jogadores dividem o prêmio relativo a posição!
           </li>
